@@ -6,10 +6,10 @@ import {
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
 
+import { Routes } from '@routes/index';
+
 import { Loading } from '@components/index';
 import { THEME } from './src/theme';
-
-import { SignUp } from '@screens/SignUp';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -24,7 +24,7 @@ export default function App() {
         barStyle="light-content"
         translucent
       />
-      {fontsLoaded ? <SignUp /> : <Loading />}
+      {fontsLoaded ? <Routes /> : <Loading />}
     </NativeBaseProvider>
   );
 }
